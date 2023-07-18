@@ -1,4 +1,4 @@
-public class Cupcake extends Cake{
+public class Cupcake extends Cake implements IIce{
 
     private int quantity;
 
@@ -7,8 +7,16 @@ public class Cupcake extends Cake{
         this.quantity = quantity;
     }
 
-    public boolean enoughIcing(){
+    public boolean enoughIcing(){ // hypothetically there is only enough icing to ice 11 cakes
         return this.quantity < 12;
+    }
+
+    public String cakeBaked(){
+        return "Cupcakes are ready";
+    }
+
+    public String ice(){
+        return "Cake is iced and ready to go";
     }
 
 }

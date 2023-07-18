@@ -11,6 +11,10 @@ public class TieredCake extends Cake{
         this.tierFlavours = new ArrayList<>();
     }
 
+    public String cakeBaked(){
+        return "Cake tiers are ready";
+    }
+
     public int getNumberOfTiers(){
         return this.numberOfTiers;
     }

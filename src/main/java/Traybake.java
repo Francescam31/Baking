@@ -7,6 +7,10 @@ public class Traybake extends Cake{
         this.sizeOfTray = sizeOfTray;
     }
 
+    public String cakeBaked(){
+        return "Traybake is ready";
+    }
+
     public int calculateBakingTime(){
 
         return 2*this.sizeOfTray; // minutes

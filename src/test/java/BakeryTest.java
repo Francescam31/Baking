@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -8,7 +9,7 @@ public class BakeryTest {
     Bakery bakery;
     Traybake traybake;
 
-    @BeforeAll
+    @BeforeEach
     public void setUp(){
         bakery = new Bakery("Greggs");
         traybake = new Traybake("Chocolate cake", "Chocolate", 25);

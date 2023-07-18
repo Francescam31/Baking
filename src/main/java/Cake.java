@@ -8,5 +8,7 @@ public abstract class Cake {
         this.baseFlavour = baseFlavour;
     }
 
+    public abstract String cakeBaked();
+
 
 }
