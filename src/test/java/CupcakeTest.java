@@ -14,14 +14,10 @@ public class CupcakeTest {
 
     }
 
-    @Test
-    public void canCheckIcing(){
-        assertThat(cupcake.enoughIcing()).isEqualTo(false);
-    }
 
     @Test
     public void canIceCake(){
-        assertThat(cupcake.ice()).isEqualTo("Cake is iced and ready to go");
+        assertThat(cupcake.ice()).isEqualTo("Cupcakes are iced and ready to go");
     }
 
     @Test
@@ -29,6 +25,17 @@ public class CupcakeTest {
         assertThat(cupcake.cakeBaked()).isEqualTo("Cupcakes are ready");
     }
 
+    @Test
+    public void canCheckEnoughIcing(){
+        assertThat(cupcake.enoughIcing()).isEqualTo(false);
+    }
+
+    @Test
+    public void canCheckEnoughIcingFlavour(){
+        assertThat(cupcake.enoughIcing("Chocolate")).isEqualTo(true);
+        assertThat(cupcake.enoughIcing("Vanilla")).isEqualTo(false);
+        assertThat(cupcake.enoughIcing("Strawberry")).isEqualTo(false);
+    }
 
 }
 

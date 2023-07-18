@@ -14,10 +14,21 @@ public class TieredCakeTest {
     }
 
     @Test
+    public void caGetNumberOfTiers(){
+        assertThat(tier.getNumberOfTiers()).isEqualTo(3);
+    }
+
+    @Test
+    public void canBakeCake(){
+        assertThat(tier.cakeBaked()).isEqualTo("Cake tiers are ready");
+    }
+
+    @Test
     public void canSetTierFlavours(){
         tier.setTierFlavours("Chocolate");
         assertThat(tier.getTierFlavours().size()).isEqualTo(3);
     }
+
 
 
 }

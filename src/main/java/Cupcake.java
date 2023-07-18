@@ -7,8 +7,18 @@ public class Cupcake extends Cake implements IIce{
         this.quantity = quantity;
     }
 
-    public boolean enoughIcing(){ // hypothetically there is only enough icing to ice 11 cakes
+    public boolean enoughIcing(){ // hypothetically there is only enough icing for 11 cakes
         return this.quantity < 12;
+    }
+
+    public boolean enoughIcing(String icingFlavour){
+        if (icingFlavour == "Chocolate"){
+            return true;
+        } else if (icingFlavour == "Vanilla") {
+            return false;
+        }else{
+            return false;
+        }
     }
 
     public String cakeBaked(){
@@ -16,7 +26,7 @@ public class Cupcake extends Cake implements IIce{
     }
 
     public String ice(){
-        return "Cake is iced and ready to go";
+        return "Cupcakes are iced and ready to go";
     }
 
 }
